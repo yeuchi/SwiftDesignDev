@@ -10,19 +10,36 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     var image:UIImage?=nil
     var myRGBA:RGBAImage? = nil
     var params:FilterParams = FilterParams()
     var state:ViewState = ViewState.Source
     
-    @IBOutlet weak var imageView: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    /*
         image = UIImage(named: "landscape")
         imageView.image = image
-        // Do any additional setup after loading the view.
+        scrollView.delegate = self
+
+  
+        let size = image?.size
+
+        scrollView.contentSize = size!
+        */
+        /*
+        let scrollViewFrame = scrollView.frame
+        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
+        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
+        let minScale = min(scaleHeight, scaleWidth)
+        */
+        scrollView.minimumZoomScale = 1
+        scrollView.maximumZoomScale = 5
+        //scrollView.zoomScale = minScale
     }
 
     // onShare
