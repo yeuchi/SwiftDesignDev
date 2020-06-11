@@ -15,6 +15,8 @@
 		D809482324916748007E4FF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D809482124916748007E4FF7 /* LaunchScreen.storyboard */; };
 		D809482E24916748007E4FF7 /* SwiftDesignDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809482D24916748007E4FF7 /* SwiftDesignDevTests.swift */; };
 		D809483924916748007E4FF7 /* SwiftDesignDevUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809483824916748007E4FF7 /* SwiftDesignDevUITests.swift */; };
+		D87253B424926C2300195CC7 /* FilterParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87253B324926C2300195CC7 /* FilterParams.swift */; };
+		D87253B624926C3400195CC7 /* RGBAImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87253B524926C3400195CC7 /* RGBAImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D809483424916748007E4FF7 /* SwiftDesignDevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDesignDevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D809483824916748007E4FF7 /* SwiftDesignDevUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDesignDevUITests.swift; sourceTree = "<group>"; };
 		D809483A24916748007E4FF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87253B324926C2300195CC7 /* FilterParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterParams.swift; sourceTree = "<group>"; };
+		D87253B524926C3400195CC7 /* RGBAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				D809481624916746007E4FF7 /* AppDelegate.swift */,
 				D809481824916746007E4FF7 /* SceneDelegate.swift */,
+				D87253B324926C2300195CC7 /* FilterParams.swift */,
 				D809481A24916746007E4FF7 /* ViewController.swift */,
+				D87253B524926C3400195CC7 /* RGBAImage.swift */,
 				D809481C24916746007E4FF7 /* Main.storyboard */,
 				D809481F24916748007E4FF7 /* Assets.xcassets */,
 				D809482124916748007E4FF7 /* LaunchScreen.storyboard */,
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87253B624926C3400195CC7 /* RGBAImage.swift in Sources */,
 				D809481B24916746007E4FF7 /* ViewController.swift in Sources */,
 				D809481724916746007E4FF7 /* AppDelegate.swift in Sources */,
 				D809481924916746007E4FF7 /* SceneDelegate.swift in Sources */,
+				D87253B424926C2300195CC7 /* FilterParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
