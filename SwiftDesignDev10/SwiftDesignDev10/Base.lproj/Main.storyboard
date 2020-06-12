@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftDesignDev10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-BH-FGG">
+                                <rect key="frame" x="16" y="20" width="343" height="51"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-nb-Cp2">
+                                <rect key="frame" x="16" y="20" width="343" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h01-dK-oed">
+                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="44"/>
+                                        <state key="normal" image="NewPhoto"/>
+                                        <connections>
+                                            <action selector="onNew:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cj3-Q7-jjC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmJ-Sw-945">
+                                        <rect key="frame" x="99.5" y="0.0" width="44" height="44"/>
+                                        <state key="normal" image="Filter"/>
+                                        <connections>
+                                            <action selector="onFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JnR-M6-623"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3u-fo-IRI">
+                                        <rect key="frame" x="199.5" y="0.0" width="43.5" height="44"/>
+                                        <state key="normal" image="Compare"/>
+                                        <connections>
+                                            <action selector="onCompare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pi6-H1-gsO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaa-B5-JJY">
+                                        <rect key="frame" x="299" y="0.0" width="44" height="44"/>
+                                        <state key="normal" image="Share"/>
+                                        <connections>
+                                            <action selector="onShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1P0-Iy-LZO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" minimumZoomScale="0.29999999999999999" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="Awl-FK-PTC">
+                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="qim-Tk-w59">
+                                        <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1280" id="VL2-cW-wEx"/>
+                                            <constraint firstAttribute="height" constant="853" id="ZU8-Im-nAQ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qim-Tk-w59" secondAttribute="trailing" id="9PN-zE-F4x"/>
+                                    <constraint firstItem="qim-Tk-w59" firstAttribute="leading" secondItem="Awl-FK-PTC" secondAttribute="leading" id="cbX-nF-nGT"/>
+                                    <constraint firstAttribute="bottom" secondItem="qim-Tk-w59" secondAttribute="bottom" id="o91-de-yZ3"/>
+                                    <constraint firstItem="qim-Tk-w59" firstAttribute="top" secondItem="Awl-FK-PTC" secondAttribute="top" id="wTg-fe-7Y6"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LzI-eb-TyT"/>
+                                    <outletCollection property="gestureRecognizers" destination="vgn-vo-iGy" appends="YES" id="KFz-ou-n2g"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="q9F-BH-FGG" firstAttribute="centerX" secondItem="Awl-FK-PTC" secondAttribute="centerX" id="6Kg-US-2sv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Awl-FK-PTC" secondAttribute="trailing" id="EGJ-vR-t0Y"/>
+                            <constraint firstItem="Awl-FK-PTC" firstAttribute="top" secondItem="q9F-BH-FGG" secondAttribute="bottom" id="KWS-0l-vlk"/>
+                            <constraint firstItem="q9F-BH-FGG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LWs-5m-Ksv"/>
+                            <constraint firstItem="q9F-BH-FGG" firstAttribute="top" secondItem="XFj-nb-Cp2" secondAttribute="top" id="Rex-Te-goz"/>
+                            <constraint firstItem="Awl-FK-PTC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gbB-JT-8L2"/>
+                            <constraint firstItem="q9F-BH-FGG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="l7o-uk-3pk"/>
+                            <constraint firstItem="q9F-BH-FGG" firstAttribute="centerX" secondItem="XFj-nb-Cp2" secondAttribute="centerX" id="vxI-V3-vOs"/>
+                            <constraint firstItem="Awl-FK-PTC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xF1-pI-tjn"/>
+                            <constraint firstAttribute="bottom" secondItem="q9F-BH-FGG" secondAttribute="bottom" constant="596" id="xbT-Aj-Qhy"/>
+                            <constraint firstItem="q9F-BH-FGG" firstAttribute="leading" secondItem="XFj-nb-Cp2" secondAttribute="leading" id="xuf-zL-bH1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="qim-Tk-w59" id="8jl-0z-0kZ"/>
+                        <outlet property="scrollView" destination="Awl-FK-PTC" id="3bE-iH-I9p"/>
+                        <outlet property="tapRecognizer" destination="vgn-vo-iGy" id="nn1-5w-H3T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vgn-vo-iGy">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="zkS-py-tDg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Compare" width="44" height="44"/>
+        <image name="Filter" width="44" height="44"/>
+        <image name="NewPhoto" width="44" height="44"/>
+        <image name="Share" width="44" height="44"/>
+        <image name="landscape" width="1280" height="853"/>
+    </resources>
+</document>
