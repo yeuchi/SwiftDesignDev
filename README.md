@@ -22,14 +22,13 @@ https://github.com/yeuchi/InstaFilterApp
 https://github.com/yeuchi/SwiftDevBasic/edit/master/README.md
 
 ### ScrollView for panning and zoom
-Wow, XCode 11 autolayout truly sucks and I thought it was just my ignorance.
-But apparently many season iOS developers find consensus.  
-Thanks to Keith Harrison's article<sup>[1]</sup> which helps alot.
+Wow, XCode 11 autolayout with scrollview is terrible and I thought it was just my ignorance.
+But apparently many season iOS developers find consensus.  Thanks to Keith Harrison's article<sup>[1]</sup> which helps alot.
 
 ## IDE
 XCode 11.5 Swift 5.1
 
 ## References
 
-1. Scroll View Layouts With Interface Builder by Keith Harrison, Sep 16, 2019
+1. Scroll View Layouts With Interface Builder by Keith Harrison, Sep 16, 2019 \
 https://useyourloaf.com/blog/scroll-view-layouts-with-interface-builder/
