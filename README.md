@@ -32,3 +32,6 @@ XCode 11.5 Swift 5.1
 
 1. Scroll View Layouts With Interface Builder by Keith Harrison, Sep 16, 2019 \
 https://useyourloaf.com/blog/scroll-view-layouts-with-interface-builder/
+
+2. UIScrollView Tutorial: Getting Started by Ron Kliffer, Nov 13 2019 \
+https://www.raywenderlich.com/5758454-uiscrollview-tutorial-getting-started
