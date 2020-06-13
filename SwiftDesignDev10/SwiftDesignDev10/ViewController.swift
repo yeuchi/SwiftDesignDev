@@ -107,14 +107,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
-        print("Prior ZoomScale:")
-        print( self.scrollView.zoomScale)
-        
-        //self.scrollView.zoomScale = 2 // * self.scrollView.zoomScale
-        self.scrollView.setZoomScale(2.0, animated: true)
-        
-        print("After ZoomScale:")
-        print( self.scrollView.zoomScale)
+        //self.scrollView.zoomScale = 1.5 * self.scrollView.zoomScale
+        self.scrollView.setZoomScale(1.5 * self.scrollView.zoomScale, animated: true)
     }
 }
 

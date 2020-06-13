@@ -58,7 +58,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" minimumZoomScale="0.29999999999999999" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="Awl-FK-PTC">
                                 <rect key="frame" x="0.0" y="71" width="375" height="596"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="qim-Tk-w59">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="qim-Tk-w59" customClass="PhotoView" customModule="SwiftDesignDev10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1280" id="VL2-cW-wEx"/>
