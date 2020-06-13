@@ -26,10 +26,10 @@ https://github.com/yeuchi/SwiftDevBasic/edit/master/README.md
 
 ### ScrollView for panning and zoom
 Wow, XCode 11 autolayout with scrollview is terrible and I thought it was just my ignorance.\
-But apparently many iOS developers find consensus on Apple forum<sup>[3]</sup>.\ 
+But apparently many iOS developers find consensus on Apple forum<sup>[3]</sup>. \ 
 Thanks to Keith Harrison's article<sup>[1]</sup> which helps alot.
 
-Apparently zoom has been broken in 2018 according the Apple Forum <sup>[3]</sup>.
+Apparently zoom has been broken in 2018 according the Apple Forum <sup>[3]</sup>. \
 As a fix, Ron Kiffer's article offer the following extension.
 ```
   extension ViewController {
