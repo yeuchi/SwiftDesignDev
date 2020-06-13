@@ -15,6 +15,7 @@
 		D88067C324955A510080884C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88067C124955A510080884C /* LaunchScreen.storyboard */; };
 		D88067CE24955A510080884C /* NSUserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88067CD24955A510080884C /* NSUserDefaultTests.swift */; };
 		D88067D924955A510080884C /* NSUserDefaultUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88067D824955A510080884C /* NSUserDefaultUITests.swift */; };
+		D8ACDDEA24955F3400A1CA9F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D8ACDDE924955F3400A1CA9F /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D88067D424955A510080884C /* NSUserDefaultUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSUserDefaultUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88067D824955A510080884C /* NSUserDefaultUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultUITests.swift; sourceTree = "<group>"; };
 		D88067DA24955A510080884C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8ACDDE924955F3400A1CA9F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D88067BF24955A510080884C /* Assets.xcassets */,
 				D88067C124955A510080884C /* LaunchScreen.storyboard */,
 				D88067C424955A510080884C /* Info.plist */,
+				D8ACDDE924955F3400A1CA9F /* Settings.bundle */,
 			);
 			path = NSUserDefault;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8ACDDEA24955F3400A1CA9F /* Settings.bundle in Resources */,
 				D88067C324955A510080884C /* LaunchScreen.storyboard in Resources */,
 				D88067C024955A510080884C /* Assets.xcassets in Resources */,
 				D88067BE24955A500080884C /* Main.storyboard in Resources */,
