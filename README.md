@@ -52,7 +52,7 @@ Settings.bundle -> Root.plist's UserDefaults are shared between OS Setting app a
 
 <img width="220" alt="1" src="https://user-images.githubusercontent.com/1282659/84578219-f1140500-ad88-11ea-8d0a-045e044747d2.png"> <img width="220" alt="2" src="https://user-images.githubusercontent.com/1282659/84578221-f2453200-ad88-11ea-9d9f-b5ead65d51b6.png"> <img width="220" alt="3" src="https://user-images.githubusercontent.com/1282659/84578222-f40ef580-ad88-11ea-8f95-c2a5627a4d5b.png">
 
-Some App delegate methods aren't being called anymore.  The new method is to use SceneDelegate. <sup>[4]</sup> \
+Some App delegate methods are deprecated.  The new method is to use SceneDelegate. <sup>[4]</sup> \
 Namely our lesson's use of AppDelegate.applicationDidBecomeActive() is outdated.
 
 <img width="784" alt="Screen Shot 2020-06-13 at 3 07 22 PM" src="https://user-images.githubusercontent.com/1282659/84578175-74812680-ad88-11ea-9fe8-88c76b9dc769.png">
