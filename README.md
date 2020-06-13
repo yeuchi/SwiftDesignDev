@@ -42,9 +42,21 @@ While I got it working, it is not free from constraint conflicts and warnings.  
 
 <img width="220" alt="Screen Shot 2020-06-12 at 6 15 50 PM" src="https://user-images.githubusercontent.com/1282659/84553174-f0239a80-acd8-11ea-88fc-41f4fca067d4.png"> <img width="220" alt="Screen Shot 2020-06-12 at 6 16 45 PM" src="https://user-images.githubusercontent.com/1282659/84553175-f0bc3100-acd8-11ea-9083-603a6accc1a4.png">
 
-### UserDefault
+### UserDefaults
 Key value pair persistence. \
 <img width="220" alt="Screen Shot 2020-06-13 at 2 18 42 PM" src="https://user-images.githubusercontent.com/1282659/84577309-d8075600-ad80-11ea-817c-3b5060dda310.png">
+
+### Setting
+Settings.bundle -> Root.plist's UserDefaults are shared between OS Setting app and our application.
+<img width="1117" alt="Screen Shot 2020-06-13 at 3 20 35 PM" src="https://user-images.githubusercontent.com/1282659/84578278-74cdf180-ad89-11ea-8b38-f0e8db2a7ae2.png">
+
+<img width="220" alt="1" src="https://user-images.githubusercontent.com/1282659/84578219-f1140500-ad88-11ea-8d0a-045e044747d2.png"> <img width="220" alt="2" src="https://user-images.githubusercontent.com/1282659/84578221-f2453200-ad88-11ea-9d9f-b5ead65d51b6.png"> <img width="220" alt="3" src="https://user-images.githubusercontent.com/1282659/84578222-f40ef580-ad88-11ea-8f95-c2a5627a4d5b.png">
+
+Some App delegate methods aren't being called anymore.  The new method is to use SceneDelegate. <sup>[4]</sup> \
+Namely our lesson's use of AppDelegate.applicationDidBecomeActive() is outdated.
+
+<img width="784" alt="Screen Shot 2020-06-13 at 3 07 22 PM" src="https://user-images.githubusercontent.com/1282659/84578175-74812680-ad88-11ea-9fe8-88c76b9dc769.png">
+<img width="788" alt="Screen Shot 2020-06-13 at 3 08 37 PM" src="https://user-images.githubusercontent.com/1282659/84578178-7ba83480-ad88-11ea-99b3-a44e9585f8d8.png">
 
 ## IDE
 XCode 10.1 Swift 4.2
@@ -59,3 +71,6 @@ https://www.raywenderlich.com/5758454-uiscrollview-tutorial-getting-started
 
 3. iOS 12 scrollview zoom broken? Apple Forum latest reply by mbrown, Jul 5, 2018 3:39 AM \
 https://forums.developer.apple.com/thread/103719
+
+4. App delegate methods aren't being called in iOS 13 by Nevan King, June 8, 2019
+https://stackoverflow.com/questions/56508764/app-delegate-methods-arent-being-called-in-ios-13
