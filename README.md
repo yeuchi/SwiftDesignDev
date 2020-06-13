@@ -43,7 +43,7 @@ While I got it working, it is not free from constraint conflicts and warnings.  
 <img width="220" alt="Screen Shot 2020-06-12 at 6 15 50 PM" src="https://user-images.githubusercontent.com/1282659/84553174-f0239a80-acd8-11ea-88fc-41f4fca067d4.png"> <img width="220" alt="Screen Shot 2020-06-12 at 6 16 45 PM" src="https://user-images.githubusercontent.com/1282659/84553175-f0bc3100-acd8-11ea-9083-603a6accc1a4.png">
 
 ### UserDefault
-Key value pair persistence.
+Key value pair persistence. \
 <img width="220" alt="Screen Shot 2020-06-13 at 2 18 42 PM" src="https://user-images.githubusercontent.com/1282659/84577309-d8075600-ad80-11ea-817c-3b5060dda310.png">
 
 ## IDE
