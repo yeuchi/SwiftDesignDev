@@ -12,8 +12,8 @@ https://www.coursera.org/learn/ios-app-design-development
 ### Course Forum 
 https://www.coursera.org/learn/ios-app-design-development/discussions
 
-This is the 2nd course of the series, 3rd repository in Github. \
-Previous 2 repositories are as follow. 
+This is the 3rd course of the series, 4rd repository in Github. \
+Previous 3 repositories are as follow. 
 
 1. Swift5ImageProcessor - 1st course - image processing in Swift utilizing RGBA.swift
 https://github.com/yeuchi/Swift5ImageProcessor
