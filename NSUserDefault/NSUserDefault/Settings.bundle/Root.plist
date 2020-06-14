@@ -20,7 +20,7 @@
 			<key>Key</key>
 			<string>PhotoFeedURLString</string>
 			<key>DefaultValue</key>
-			<string>http://https//api.flickr.com/services/feeds/photos_public.gne?tags=kitten&amp;format=json&amp;nojsoncallback=1</string>
+			<string>https://www.flickr.com/services/feeds/photos_public.gne?tags=kitten&amp;format=json</string>
 			<key>Titles</key>
 			<array>
 				<string>Kittens</string>
@@ -29,9 +29,9 @@
 			</array>
 			<key>Values</key>
 			<array>
-				<string>http://https//api.flickr.com/services/feeds/photos_public.gne?tags=kitten&amp;format=json&amp;nojsoncallback=1</string>
-				<string>http://https//api.flickr.com/services/feeds/photos_public.gne?tags=pug&amp;format=json&amp;nojsoncallback=1</string>
-				<string>http://https//api.flickr.com/services/feeds/photos_public.gne?tags=pizza&amp;format=json&amp;nojsoncallback=1</string>
+				<string>https://www.flickr.com/services/feeds/photos_public.gne?tags=kitten&amp;format=json</string>
+				<string>https://www.flickr.com/services/feeds/photos_public.gne?tags=pug&amp;format=json</string>
+				<string>https://www.flickr.com/services/feeds/photos_public.gne?tags=pizza&amp;format=json</string>
 			</array>
 		</dict>
 	</array>
