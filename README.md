@@ -30,7 +30,8 @@ But apparently many iOS developers find consensus on Apple forum<sup>[3]</sup>. 
 Thanks to Keith Harrison's article<sup>[1]</sup> which helps alot.
 
 Apparently zoom has been broken in 2018 according the Apple Forum <sup>[3]</sup>. \
-As a fix, Ron Kiffer's article offer the following extension.
+As a fix, Ron Kiffer's article offer the following extension. \ 
+But why an extension to 'ALL' ViewController(s) when it is not a Sealed class ?
 ```
   extension ViewController {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
