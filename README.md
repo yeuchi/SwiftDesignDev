@@ -63,7 +63,7 @@ Namely our lesson's use of AppDelegate.applicationDidBecomeActive() is outdated.
 ### HTTP Request 
 Some changes have been had in Swift 5.1 for asnyc network request. \
 First, there is the addition of completionHandler. \
-Second, there is an alternative to using NSOperationQueue.mainQueue().addOperationWithBlock()
+Second, there is an alternative to using NSOperationQueue.mainQueue().addOperationWithBlock() \
 Once again, article on the topic of HTTPRequest does not speak well for Apple in their software design. Nonetheless, Reinder <sup>[5]</sup> does a pretty good job describing the process.
 
 ```
