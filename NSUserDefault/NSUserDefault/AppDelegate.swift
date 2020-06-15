@@ -13,11 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UserDefaults.standard.register(defaults: ["PhotoFeedURLString" : "http://https//api.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1"])
+        UserDefaults.standard.register(defaults: ["PhotoFeedURLString" : "https://www.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1"])
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
@@ -31,9 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        let urlString = UserDefaults.standard.string(forKey: "PhotoFeedURLString")
-        print(urlString)
+    /*
+     * deprecated -- do not use
+     */
+    func applicationDidBecomeActive(application: UIApplication) {
     }
 }
 

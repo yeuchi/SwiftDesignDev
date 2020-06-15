@@ -1,17 +1,14 @@
 //
-//  ImageFeedTableTableViewController.swift
+//  ImageFeedTableViewController.swift
 //  NSUserDefault
 //
-//  Created by yeuchi on 6/13/20.
+//  Created by yeuchi on 6/15/20.
 //  Copyright © 2020 yeuchi. All rights reserved.
-
-//  Created by Mike Spears on 2016-01-08.
-//  Copyright © 2016 YourOganisation. All rights reserved.
 //
 
 import UIKit
 
-class ImageFeedTableTableViewController: UITableViewController {
+class ImageFeedTableViewController: UITableViewController {
 
     var feed: Feed? {
         didSet {
@@ -78,7 +75,15 @@ class ImageFeedTableTableViewController: UITableViewController {
             return cell
         }
 
-    
+    /*
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
+        return cell
+    }
+    */
 
     /*
     // Override to support conditional editing of the table view.
