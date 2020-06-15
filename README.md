@@ -61,8 +61,8 @@ Namely our lesson's use of AppDelegate.applicationDidBecomeActive() is outdated.
 <img width="788" alt="Screen Shot 2020-06-13 at 3 08 37 PM" src="https://user-images.githubusercontent.com/1282659/84578178-7ba83480-ad88-11ea-99b3-a44e9585f8d8.png">
 
 ### HTTP Request 
-Some changes have been had in Swift 5.1 for asnyc network request.
-First, there is the addition of completionHandler.
+Some changes have been had in Swift 5.1 for asnyc network request. \
+First, there is the addition of completionHandler. \
 Second, there is an alternative to using NSOperationQueue.mainQueue().addOperationWithBlock()
 
 ```
