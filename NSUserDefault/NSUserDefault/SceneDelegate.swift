@@ -10,6 +10,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    var viewController:ImageFeedTableViewController? = nil
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,6 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        self.viewController = self.window?.rootViewController as! ImageFeedTableViewController
+        if(self.viewController == nil) {
+            print("don't have viewController ")
+        }
+        else {
+            print("viewController is good !")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -31,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
         
         let urlString = UserDefaults.standard.string(forKey: "PhotoFeedURLString")
-            print(urlString)
+        print(urlString)
 
         guard let foundURLString = urlString else {
             return
@@ -39,27 +48,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let url = NSURL(string: foundURLString) {
             self.updateFeed(url: url, completion: { (feed) -> Void in
-                
-                if let windowScene = scene as? UIWindowScene {
-                    let window = UIWindow(windowScene: windowScene)
 
-                    let viewController = window.rootViewController as? ImageFeedTableViewController
-                    viewController?.feed = feed
-                }
+                //viewController?.feed = feed
+                print("done sceneDidBecomeActive")
             })
         }
     }
-        
+    
     func updateFeed(url: NSURL, completion: (_ feed: Feed?) -> Void) {
         let request = NSURLRequest(url: url as URL)
         let session = URLSession.shared
         let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
             
-            if let data = data {
-            //let feed = Feed(data: data as NSData, sourceURL: url)
-                DispatchQueue.main.async {
-                   let feed = Feed(data: data as NSData, sourceURL: url)
+            if error != nil || data == nil {
+                print("Client error!")
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                print("Server error!")
+                return
+            }
+
+            guard let mime = response.mimeType, mime == "application/json" else {
+                print("Wrong MIME type!")
+                return
+            }
+
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                print(json)
+                
+                // DispatchQueue.main.async {
+                let feed = Feed(data: data as! NSData, sourceURL: url)
+                
+                if(self.viewController != nil) {
+                    self.viewController?.feed = feed
                 }
+                // }
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
             }
         })
         task.resume()
