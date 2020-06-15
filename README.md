@@ -60,6 +60,28 @@ Namely our lesson's use of AppDelegate.applicationDidBecomeActive() is outdated.
 <img width="784" alt="Screen Shot 2020-06-13 at 3 07 22 PM" src="https://user-images.githubusercontent.com/1282659/84578175-74812680-ad88-11ea-9fe8-88c76b9dc769.png">
 <img width="788" alt="Screen Shot 2020-06-13 at 3 08 37 PM" src="https://user-images.githubusercontent.com/1282659/84578178-7ba83480-ad88-11ea-99b3-a44e9585f8d8.png">
 
+### HTTP Request 
+Some changes have been had in Swift 5.1 for asnyc network request.
+First, there is the addition of completionHandler.
+Second, there is an alternative to using NSOperationQueue.mainQueue().addOperationWithBlock()
+
+```
+    func updateFeed(url: NSURL, completion: (_ feed: Feed?) -> Void) {
+        let request = NSURLRequest(url: url as URL)
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+            
+            if let data = data {
+            //let feed = Feed(data: data as NSData, sourceURL: url)
+                DispatchQueue.main.async {
+                   let feed = Feed(data: data as NSData, sourceURL: url)
+                }
+            }
+        })
+        task.resume()
+    }
+```
+
 ## IDE
 XCode 10.1 Swift 4.2
 
@@ -76,3 +98,6 @@ https://forums.developer.apple.com/thread/103719
 
 4. App delegate methods aren't being called in iOS 13 by Nevan King, June 8, 2019
 https://stackoverflow.com/questions/56508764/app-delegate-methods-arent-being-called-in-ios-13
+
+5. Networking In Swift With URLSession by Reinder de Vries on January 25 2019
+https://learnappmaking.com/urlsession-swift-networking-how-to/
