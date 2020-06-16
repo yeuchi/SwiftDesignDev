@@ -64,7 +64,7 @@ Namely our lesson's use of AppDelegate.applicationDidBecomeActive() is outdated.
 Some changes have been had in Swift 5.1 for asnyc network request. \
 First, there is the addition of completionHandler. \
 Second, there is an alternative to using NSOperationQueue.mainQueue().addOperationWithBlock() \
-Once again, article on the topic of HTTPRequest does not speak well for Apple in their software design. Nonetheless, Reinder <sup>[5]</sup> does a pretty good job describing the process.
+Reinder <sup>[5]</sup> does a pretty good job describing the process.
 
 ```
     func updateFeed(url: NSURL, completion: (_ feed: Feed?) -> Void) {
@@ -82,6 +82,7 @@ Once again, article on the topic of HTTPRequest does not speak well for Apple in
         task.resume()
     }
 ```
+<img width="220" alt="Screen Shot 2020-06-15 at 7 39 56 PM" src="https://user-images.githubusercontent.com/1282659/84719134-2747b500-af40-11ea-9837-fe1654adf966.png">
 
 ## IDE
 XCode 10.1 Swift 4.2
