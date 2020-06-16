@@ -102,5 +102,5 @@ https://forums.developer.apple.com/thread/103719
 4. App delegate methods aren't being called in iOS 13 by Nevan King, June 8, 2019
 https://stackoverflow.com/questions/56508764/app-delegate-methods-arent-being-called-in-ios-13
 
-5. Networking In Swift With URLSession by Reinder de Vries on January 25 2019
+5. Networking In Swift With URLSession by Reinder de Vries on January 25 2019 \
 https://learnappmaking.com/urlsession-swift-networking-how-to/
