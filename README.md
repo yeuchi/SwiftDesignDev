@@ -82,7 +82,7 @@ Reinder <sup>[5]</sup> does a pretty good job describing the process.
         task.resume()
     }
 ```
--> Settings: Kittens, Pugs, Pizza
+-> Settings: Kittens, Pugs, Pizza \
 <img width="220" alt="Screen Shot 2020-06-15 at 7 39 56 PM" src="https://user-images.githubusercontent.com/1282659/84719134-2747b500-af40-11ea-9837-fe1654adf966.png"> <img width="220" alt="Screen Shot 2020-06-15 at 7 43 26 PM" src="https://user-images.githubusercontent.com/1282659/84719286-94f3e100-af40-11ea-9d6e-b250ab24482e.png"> <img width="220" alt="Screen Shot 2020-06-15 at 7 43 57 PM" src="https://user-images.githubusercontent.com/1282659/84719289-96bda480-af40-11ea-969d-f734790bd11d.png">
 
 ## IDE
