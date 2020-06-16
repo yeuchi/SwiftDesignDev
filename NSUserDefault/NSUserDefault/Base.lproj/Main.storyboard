@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="106" id="CLs-LV-CTl" customClass="ImageFeedItemTableViewCell" customModule="NSUserDefault" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageFeedItemTableViewCell" rowHeight="106" id="CLs-LV-CTl" customClass="ImageFeedItemTableViewCell" customModule="NSUserDefault" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLs-LV-CTl" id="RsL-wL-DKU">
@@ -71,6 +71,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="ImageFeedItemTableViewCell"/>
                                 <connections>
                                     <outlet property="itemImageView" destination="IYQ-te-AOT" id="C51-2j-fQA"/>
                                     <outlet property="itemTitle" destination="2BG-o2-Uz8" id="aHI-Mg-npP"/>

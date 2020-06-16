@@ -79,13 +79,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 print(json)
                 
-                // DispatchQueue.main.async {
+                
                 let feed = Feed(data: data as! NSData, sourceURL: url)
                 
                 if(self.viewController != nil) {
-                    self.viewController?.feed = feed
+                    DispatchQueue.main.async {
+                        self.viewController?.feed = feed
+                    }
                 }
-                // }
             } catch {
                 print("JSON error: \(error.localizedDescription)")
             }
