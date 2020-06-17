@@ -64,7 +64,7 @@ Namely our lesson's use of AppDelegate.applicationDidBecomeActive() is outdated.
 Some changes have been had in Swift 5.1 for asnyc network request. \
 First, there is the addition of completionHandler. \
 Second, there is an alternative to using NSOperationQueue.mainQueue().addOperationWithBlock() \
-Once again, article on the topic of HTTPRequest does not speak well for Apple in their software design. Nonetheless, Reinder <sup>[5]</sup> does a pretty good job describing the process.
+Reinder <sup>[5]</sup> does a pretty good job describing the process.
 
 ```
     func updateFeed(url: NSURL, completion: (_ feed: Feed?) -> Void) {
@@ -82,6 +82,13 @@ Once again, article on the topic of HTTPRequest does not speak well for Apple in
         task.resume()
     }
 ```
+-> Settings: Kittens, Pugs, Pizza \
+<img width="220" alt="Screen Shot 2020-06-15 at 7 39 56 PM" src="https://user-images.githubusercontent.com/1282659/84719134-2747b500-af40-11ea-9837-fe1654adf966.png"> <img width="220" alt="Screen Shot 2020-06-15 at 7 43 26 PM" src="https://user-images.githubusercontent.com/1282659/84719286-94f3e100-af40-11ea-9d6e-b250ab24482e.png"> <img width="220" alt="Screen Shot 2020-06-15 at 7 43 57 PM" src="https://user-images.githubusercontent.com/1282659/84719289-96bda480-af40-11ea-969d-f734790bd11d.png">
+
+### Cache data
+
+NSKeyedArchiver has changed significantly since lesson.  Thanks to Paul Hudson<sup>[6]</sup> for the updated API.
+
 
 ## IDE
 XCode 10.1 Swift 4.2
@@ -100,5 +107,9 @@ https://forums.developer.apple.com/thread/103719
 4. App delegate methods aren't being called in iOS 13 by Nevan King, June 8, 2019
 https://stackoverflow.com/questions/56508764/app-delegate-methods-arent-being-called-in-ios-13
 
-5. Networking In Swift With URLSession by Reinder de Vries on January 25 2019
+5. Networking In Swift With URLSession by Reinder de Vries on January 25 2019 \
 https://learnappmaking.com/urlsession-swift-networking-how-to/
+
+6. How to save and load objects with NSKeyedArchiver and NSKeyedUnarchiver by Paul Hudson, May 28th 2019 \
+https://www.hackingwithswift.com/example-code/system/how-to-save-and-load-objects-with-nskeyedarchiver-and-nskeyedunarchiver
+https://www.swiftdevcenter.com/save-and-get-objects-using-nskeyedarchiver-and-nskeyedunarchiver-swift-5/
