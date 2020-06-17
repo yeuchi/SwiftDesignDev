@@ -49,7 +49,7 @@ While I got it working, it is not free from constraint conflicts and warnings.  
 <img width="220" alt="Screen Shot 2020-06-12 at 6 15 50 PM" src="https://user-images.githubusercontent.com/1282659/84553174-f0239a80-acd8-11ea-88fc-41f4fca067d4.png"> <img width="220" alt="Screen Shot 2020-06-12 at 6 16 45 PM" src="https://user-images.githubusercontent.com/1282659/84553175-f0bc3100-acd8-11ea-9083-603a6accc1a4.png">
 
 ## NSUserDefault Project
-Jack Spear offered a number of projects for his lessons; they are consolidated.
+Mike Spears offered a number of projects for his lessons; they are consolidated.
 
 ### UserDefaults
 Key value pair persistence. \
