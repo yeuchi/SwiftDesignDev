@@ -47,7 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         if let url = NSURL(string: foundURLString) {
-            self.updateFeed(url: url, completion: { (feed) -> Void in
+            self.loadOrUpdateFeed(url: url, completion: { (feed) -> Void in
 
                 //viewController?.feed = feed
                 print("done sceneDidBecomeActive")
@@ -82,16 +82,119 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
                 let feed = Feed(data: data as! NSData, sourceURL: url)
                 
-                if(self.viewController != nil) {
-                    DispatchQueue.main.async {
-                        self.viewController?.feed = feed
+                if(feed != nil) {
+                    if self.saveFeed(feed: feed!) {
+                        // save date when feed is saved
+                        UserDefaults.standard.set(NSDate(), forKey: "lastUpdate")
                     }
+                    
+                    if(self.viewController != nil) {
+                        DispatchQueue.main.async {
+                            self.viewController?.feed = feed
+                        }
+                    }
+                    
+                    print("loaded Remote feed!")
                 }
+                
             } catch {
                 print("JSON error: \(error.localizedDescription)")
             }
         })
         task.resume()
+    }
+    
+    func isCacheDataStale() -> Bool {
+        let lastUpdatedSetting = UserDefaults.standard.object(forKey: "lastUpdate") as? NSDate
+        
+        // compare now with recorded time - last saved
+        if(lastUpdatedSetting != nil){
+            let timeInterval = NSDate().timeIntervalSince(lastUpdatedSetting as! Date)
+            if timeInterval < 20 {
+                return false
+            }
+        }
+        return true
+    }
+    
+    /*
+     * Load data if stale
+     */
+    func loadOrUpdateFeed(url: NSURL, completion: (_ feed: Feed?) -> Void) {
+        let shouldUpdate = isCacheDataStale()
+        
+        if shouldUpdate {
+            self.updateFeed(url: url, completion: completion)
+        }
+        else {
+            /*
+             * load the saved file
+             */
+            let feed = self.readFeed()
+            if(feed != nil) {
+                if feed?.sourceURL.absoluteURL == url.absoluteURL {
+                    print("loaded saved feed!")
+                    return
+                }
+            }
+            
+            // if failed to read above, get fresh data from network
+            self.updateFeed(url: url, completion: completion)
+        }
+    }
+    
+    /*
+     * get a local cache file path
+     */
+    func feedFilePath() -> URL {
+        // Request application cache or document directory
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let filePath = paths[0].appendingPathComponent("feedFile.plist")
+        print(filePath)
+        return filePath
+    }
+    
+    /*
+     * save the feed as cache file
+     */
+    func saveFeed(feed: Feed) -> Bool {
+        do {
+            let fileUrl = feedFilePath()
+            let data = try NSKeyedArchiver.archivedData(withRootObject: feed, requiringSecureCoding: false)
+            try data.write(to: fileUrl)
+            UserDefaults.standard.set(fileUrl, forKey: "fileUrl")
+            print(fileUrl)
+            return true
+        }
+        catch {
+            print("failed to write archive")
+            return false
+        }
+    }
+    
+    /*
+     * read the cache file back
+     */
+    func readFeed() -> Feed? {
+        
+        do {
+            let fileUrl = UserDefaults.standard.url(forKey: "fileUrl")
+
+            if(fileUrl != nil) {
+                print(fileUrl)
+                let data = try Data(contentsOf: fileUrl!)
+                let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+                if object != nil {
+                    return object as! Feed
+                }
+                print("read failed : nil")
+            }
+            print("no user defaults available")
+            
+        } catch {
+            print("Couldn't read file.")
+        }
+        return nil
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

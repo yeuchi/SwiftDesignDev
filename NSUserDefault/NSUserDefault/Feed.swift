@@ -15,7 +15,7 @@ func fixJsonData (data: NSData) -> NSData {
     return dataString.data(using: .utf8) as! NSData
 }
 
-class Feed {
+class Feed : NSObject, NSCoding {
     
     let items: [FeedItem]
     let sourceURL: NSURL
@@ -23,6 +23,23 @@ class Feed {
     init (items newItems: [FeedItem], sourceURL newURL: NSURL) {
         self.items = newItems
         self.sourceURL = newURL
+        super.init()
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(self.items, forKey: "feedItems")
+        coder.encode(self.sourceURL, forKey: "feedSource")
+    }
+    
+    required convenience init?(coder: NSCoder) {
+        let storedItems = coder.decodeObject(forKey: "feedItems") as? [FeedItem]
+        let storedURL = coder.decodeObject(forKey: "feedSourceURL") as? NSURL
+        
+        guard storedItems != nil && storedURL != nil else {
+            return nil
+        }
+        
+        self.init(items: storedItems!, sourceURL: storedURL!)
     }
     
     convenience init? (data: NSData, sourceURL url: NSURL) {
