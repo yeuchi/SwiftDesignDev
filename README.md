@@ -24,7 +24,7 @@ https://github.com/yeuchi/InstaFilterApp
 3. SwiftDevBasic - 2nd course - final project. \
 https://github.com/yeuchi/SwiftDevBasic/edit/master/README.md
 
-### ScrollView for panning and zoom
+### ScrollView for panning and zoom - Project : SwiftDesignDev10
 Wow, XCode 11 autolayout with scrollview has gotten worse over the years; I thought it was just my ignorance.\
 But apparently many iOS developers find consensus on Apple forum<sup>[3]</sup>. \ 
 Thanks to Keith Harrison's article<sup>[1]</sup> which helps alot.
