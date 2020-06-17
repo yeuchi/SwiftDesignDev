@@ -112,3 +112,4 @@ https://learnappmaking.com/urlsession-swift-networking-how-to/
 
 6. How to save and load objects with NSKeyedArchiver and NSKeyedUnarchiver by Paul Hudson, May 28th 2019 \
 https://www.hackingwithswift.com/example-code/system/how-to-save-and-load-objects-with-nskeyedarchiver-and-nskeyedunarchiver
+https://www.swiftdevcenter.com/save-and-get-objects-using-nskeyedarchiver-and-nskeyedunarchiver-swift-5/
