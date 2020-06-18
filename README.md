@@ -5,7 +5,7 @@
 Coursera University of Toronto iOS App Development with Swift Specialization Courses: \
 Course 3 : App Design and Development for iOS with Professor Parham Aarabi. 
 - Week 1 - 2 : UIScrollView pan & zoom, NavigationController, TabController with Jack Wu. 
-- Week 3 : UserDefaults (equivalent of SharedPreference on Android) with Mike Spears. 
+- Week 3 : UserDefaults, cache, network and core data with Mike Spears. 
 
 https://www.coursera.org/learn/ios-app-design-development
 
@@ -23,6 +23,10 @@ https://github.com/yeuchi/InstaFilterApp
 
 3. SwiftDevBasic - 2nd course - final project. \
 https://github.com/yeuchi/SwiftDevBasic/edit/master/README.md
+
+## SwiftDesignDev10 Project
+Due to some big constraint changes in XCode 11.1 StoryBoard, I opted to use XCode 10.1 for this lesson by Jack Wu.
+It is perfectly compatible with XCode 11.1. 
 
 ### ScrollView for panning and zoom
 Wow, XCode 11 autolayout with scrollview has gotten worse over the years; I thought it was just my ignorance.\
@@ -43,6 +47,9 @@ Also, Panning is broken in XCode 11.1, or at least it requires addition configur
 While I got it working, it is not free from constraint conflicts and warnings.  Check out Keith Harrison's article<sup>[1]</sup> for solution.
 
 <img width="220" alt="Screen Shot 2020-06-12 at 6 15 50 PM" src="https://user-images.githubusercontent.com/1282659/84553174-f0239a80-acd8-11ea-88fc-41f4fca067d4.png"> <img width="220" alt="Screen Shot 2020-06-12 at 6 16 45 PM" src="https://user-images.githubusercontent.com/1282659/84553175-f0bc3100-acd8-11ea-9083-603a6accc1a4.png">
+
+## NSUserDefault Project
+Mike Spears offered a number of projects for his lessons; they are consolidated.
 
 ### UserDefaults
 Key value pair persistence. \
