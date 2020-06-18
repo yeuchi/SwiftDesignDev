@@ -18,7 +18,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        title.alpha = 0.0
+        title.alpha = 1.0
         imageView.image = nil
         
     }
@@ -26,7 +26,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        title.alpha = 0.0
+        title.alpha = 1.0
     }
     
     
