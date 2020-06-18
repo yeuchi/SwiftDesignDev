@@ -98,7 +98,8 @@ Reinder <sup>[5]</sup> does a pretty good job describing the process.
 NSKeyedArchiver has changed significantly since lesson.  Thanks to Paul Hudson<sup>[6]</sup> for the updated API.
 
 ## TV OS Project
-Some differences throughout the project updated.
+Significant differences through the project from previous.
+ImageFeedCollectionViewController invokes the URL loading instead of AppDelegate; leaving us mediocre resue.
 <img width="600" alt="Screen Shot 2020-06-18 at 2 34 45 PM" src="https://user-images.githubusercontent.com/1282659/85064289-f8645580-b170-11ea-9183-4e9914e2e167.png">
 
 ## IDE
