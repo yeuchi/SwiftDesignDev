@@ -98,8 +98,8 @@ Reinder <sup>[5]</sup> does a pretty good job describing the process.
 NSKeyedArchiver has changed significantly since lesson.  Thanks to Paul Hudson<sup>[6]</sup> for the updated API.
 
 ## TV OS Project
-
-<img width="600" alt="Screen Shot 2020-06-18 at 1 54 56 PM" src="https://user-images.githubusercontent.com/1282659/85061042-c8668380-b16b-11ea-803d-e9a517f83778.png">
+Some differences throughout the project updated.
+<img width="600" alt="Screen Shot 2020-06-18 at 2 34 45 PM" src="https://user-images.githubusercontent.com/1282659/85064289-f8645580-b170-11ea-9183-4e9914e2e167.png">
 
 ## IDE
 XCode 10.1 Swift 4.2
