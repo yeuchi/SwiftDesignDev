@@ -99,7 +99,7 @@ NSKeyedArchiver has changed significantly since lesson.  Thanks to Paul Hudson<s
 
 ## TV OS Project
 Significant differences through the project from previous. \
-ImageFeedCollectionViewController invokes the URL loading instead of AppDelegate; leaving us mediocre resue.
+ImageFeedCollectionViewController invokes the URL loading instead of AppDelegate; leaving us a mediocre workflow.
 <img width="600" alt="Screen Shot 2020-06-18 at 2 34 45 PM" src="https://user-images.githubusercontent.com/1282659/85064289-f8645580-b170-11ea-9183-4e9914e2e167.png">
 
 ## IDE
