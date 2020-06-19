@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ImageFeedTableViewController: UITableViewController {
 
@@ -90,16 +91,37 @@ class ImageFeedTableViewController: UITableViewController {
             
             return cell
         }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let item = self.feed!.items[indexPath.row]
+        
+        let alertController = UIAlertController(title: "Add Tag", message: "Type your tag", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default) {(action)->Void in
+            if let tagTitle = alertController.textFields?[0].text {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate; appDelegate.dataController.tagFeedItem(tagTitle: tagTitle, feedItem: item)
+            }
+        }
+        alertController.addAction(defaultAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.addTextField(configurationHandler: nil)
+        self.present(alertController, animated:true)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTags" {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let moc = appDelegate.dataController.managedObjectContext
+            
+            let tagsVC = segue.destination as! TagsTableViewController
+            
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Tag")
+            request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+            
+            tagsVC.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

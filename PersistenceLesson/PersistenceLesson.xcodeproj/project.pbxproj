@@ -24,6 +24,7 @@
 		D893ED9A249D4FC5006D2838 /* ImageFeedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D893ED98249D4FC5006D2838 /* ImageFeedItemTableViewCell.swift */; };
 		D893ED9B249D4FC5006D2838 /* ImageFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D893ED99249D4FC5006D2838 /* ImageFeedTableViewController.swift */; };
 		D893ED9D249D50AE006D2838 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D893ED9C249D50AE006D2838 /* DataController.swift */; };
+		D893ED9F249D5CB1006D2838 /* TagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D893ED9E249D5CB1006D2838 /* TagsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D893ED98249D4FC5006D2838 /* ImageFeedItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFeedItemTableViewCell.swift; sourceTree = "<group>"; };
 		D893ED99249D4FC5006D2838 /* ImageFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFeedTableViewController.swift; sourceTree = "<group>"; };
 		D893ED9C249D50AE006D2838 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		D893ED9E249D5CB1006D2838 /* TagsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				D893ED71249D4A93006D2838 /* AppDelegate.swift */,
 				D893ED73249D4A93006D2838 /* SceneDelegate.swift */,
 				D893ED94249D4FB7006D2838 /* Feed.swift */,
+				D893ED9E249D5CB1006D2838 /* TagsTableViewController.swift */,
 				D893ED98249D4FC5006D2838 /* ImageFeedItemTableViewCell.swift */,
 				D893ED99249D4FC5006D2838 /* ImageFeedTableViewController.swift */,
 				D893ED95249D4FB7006D2838 /* FeedItem.swift */,
@@ -189,6 +192,7 @@
 				D893ED9D249D50AE006D2838 /* DataController.swift in Sources */,
 				D893ED74249D4A93006D2838 /* SceneDelegate.swift in Sources */,
 				D893ED9A249D4FC5006D2838 /* ImageFeedItemTableViewCell.swift in Sources */,
+				D893ED9F249D5CB1006D2838 /* TagsTableViewController.swift in Sources */,
 				D893ED7C249D4A93006D2838 /* PersistenceLesson.xcdatamodeld in Sources */,
 				D893ED9B249D4FC5006D2838 /* ImageFeedTableViewController.swift in Sources */,
 				D893ED91249D4F90006D2838 /* Image+CoreDataProperties.swift in Sources */,

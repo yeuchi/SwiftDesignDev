@@ -73,7 +73,7 @@ class DataController {
             
             newImage.title = feedItem.title
             newImage.imageUrl = feedItem.imageURL.absoluteString
-            //newImage.tag = tag
+            newImage.tagLink = tag
             
             do {
                 try self.managedObjectContext.save()
