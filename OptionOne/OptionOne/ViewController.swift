@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, TableDelegateProtocol, FeedDelegateProtocol, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
 
+    @IBOutlet weak var btnShare: UIButton!
+    @IBOutlet weak var btnCompare: UIButton!
+    
     var image:UIImage?=nil
     var myRGBA:RGBAImage? = nil
     var params:FilterParams = FilterParams()
@@ -23,21 +26,17 @@ class ViewController: UIViewController, TableDelegateProtocol, FeedDelegateProto
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btnShare.isEnabled = false
+        btnCompare.isEnabled = false
+        
         let configuration = URLSessionConfiguration.default
         self.urlSession = URLSession(configuration: configuration)
         
         self.scrollView.delegate = self
         self.scrollView.contentSize = imageView.frame.size
+        self.image = self.imageView.image
         
         self.tapRecognizer.numberOfTapsRequired = 2
-        /*
-         image = UIImage(named: "landscape")
-         imageView.image = image
-         
-         let size = image?.size
-         scrollView.contentSize = size!
-         */
-        
         self.scrollView.minimumZoomScale = 0.3
         self.scrollView.maximumZoomScale = 5
     }
@@ -79,42 +78,11 @@ class ViewController: UIViewController, TableDelegateProtocol, FeedDelegateProto
     }
     
     @IBAction func onCompare(_ sender: UIButton) {
-   
+        // not required for this assignment
     }
     
     @IBAction func onShare(_ sender: UIButton) {
-
-        /*
-         let activityController = UIActivityViewController(activityItems: ["Check out our really cool app", imageView.image!], applicationActivities: nil)
-         presentViewController(activityController, animated: true, completion: nil)
-         */
-    }
-    
-    func showCamera() {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        picker.sourceType = .camera
-        present(picker, animated: true)
-    }
-    
-    func showAlbum() {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        picker.sourceType = .photoLibrary
-        present(picker, animated: true)
-    }
-    
-    // MARK: UIImagePickerControllerDelegate
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        dismiss(animated: true, completion: nil)
-        self.image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        imageView.image = self.image
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
+        // not required for this assignment
     }
     
     func scrollViewDidZoom(_ scrollView: UIScrollView) {

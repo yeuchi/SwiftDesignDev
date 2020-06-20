@@ -14,7 +14,7 @@ protocol FeedDelegateProtocol {
 
 class ImageFeedTableViewController: UITableViewController {
 
-    var urlString = "https://api.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1"
+    var defaultUrlString = "https://api.flickr.com/services/feeds/photos_public.gne?tags=kitten&format=json&nojsoncallback=1"
     var delegate: FeedDelegateProtocol? = nil
     
     var feed: Feed? {
@@ -50,7 +50,14 @@ class ImageFeedTableViewController: UITableViewController {
         self.feed = nil
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        if let url = NSURL(string: urlString) {
+        var urlString = UserDefaults.standard.string(forKey: "PhotoFeedURLString")
+        print(urlString)
+        
+        if(urlString == nil) {
+            urlString = defaultUrlString
+        }
+        
+        if let url = NSURL(string: urlString!) {
             appDelegate.viewController = self
             appDelegate.loadOrUpdateFeed(url: url, completion: { (feed) -> Void in
                 //self.feed = feed
