@@ -10,14 +10,32 @@ import UIKit
 import CoreData
 
 
-class TagsTableViewController: UITableViewController {
+class TagsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController<NSFetchRequestResult>()
+    
+    func getFetchedResultController() -> NSFetchedResultsController<NSFetchRequestResult> {
+        let dataController = DataController()
+        let managedObjectContext = dataController!.managedObjectContext
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        return fetchedResultsController
+    }
+    
+    func taskFetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Image")
+        let sortDescriptor = NSSortDescriptor(key: "desc", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
+    }
     
     override func viewWillAppear(_ animated: Bool) {
+         fetchedResultsController = getFetchedResultController()
+         fetchedResultsController.delegate = self
+        
         do {
-            try self.fetchedResultsController.performFetch()
-        } catch {
+                try self.fetchedResultsController.performFetch()
+            }
+        catch {
             fatalError("tags fetch failed")
         }
     }
@@ -25,7 +43,10 @@ class TagsTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return self.fetchedResultsController.sections!.count
+        if(self.fetchedResultsController != nil) {
+            return self.fetchedResultsController.sections!.count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
