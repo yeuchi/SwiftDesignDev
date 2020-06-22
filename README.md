@@ -1,6 +1,5 @@
 # SwiftDesignDev
 
-
 ## Course
 Coursera University of Toronto iOS App Development with Swift Specialization Courses: \
 Course 3 : App Design and Development for iOS with Professor Parham Aarabi. 
